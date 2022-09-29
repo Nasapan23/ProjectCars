@@ -7,9 +7,9 @@ public class Car {
 	int CarRadius;
 	int GasMoney;
 	String CarName;
-	Boolean IsDiesel;
+	boolean IsDiesel;
 	public Car(int PosX,int PosY,int CarRadius,
-			String CarName,Boolean IsDiesel){
+			String CarName,boolean IsDiesel){
 		this.PosX=PosX;
 		this.PosY=PosY;
 		this.CarRadius=CarRadius;
@@ -27,7 +27,7 @@ public class Car {
 	public void SetCarName(String CarName) {
 		this.CarName=CarName;
 	}
-	public void SetIsDiesel(Boolean IsDiesel) {
+	public void SetIsDiesel(boolean IsDiesel) {
 		this.IsDiesel=IsDiesel;
 	}
 	public void SetDriverMoney(int GasMoney) {
@@ -45,10 +45,13 @@ public class Car {
 	public String GetCarName() {
 		return CarName;
 	}
-	public Boolean GetIsDiesel() {
+	public boolean GetIsDiesel() {
 		return IsDiesel;
 	}
 	public int GetGasMoney() {
 		return GasMoney;
+	}
+	public String toString(){
+		return this.PosX +" " +this.PosY+" "+ this.CarRadius+" "+ this.CarName+" "+ this.IsDiesel;
 	}
 }
